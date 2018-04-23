@@ -1,0 +1,19 @@
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "DXGrid_CreateCellContextMenu", "DXGrid_CreateCellContextMenu.vbproj", "{294F71F5-3E30-4167-8F16-C8C1022C1457}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{294F71F5-3E30-4167-8F16-C8C1022C1457}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{294F71F5-3E30-4167-8F16-C8C1022C1457}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{294F71F5-3E30-4167-8F16-C8C1022C1457}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{294F71F5-3E30-4167-8F16-C8C1022C1457}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
