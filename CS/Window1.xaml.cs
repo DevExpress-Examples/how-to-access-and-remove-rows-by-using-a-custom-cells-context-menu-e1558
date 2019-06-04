@@ -1,9 +1,8 @@
-﻿using System;
+﻿using DevExpress.Xpf.Bars;
+using DevExpress.Xpf.Grid;
+using System;
 using System.Collections.Generic;
 using System.Windows;
-using System.Windows.Documents;
-using DevExpress.Xpf.Grid;
-using DevExpress.Xpf.Bars;
 
 namespace DXGrid_CreateCellContextMenu {
 
@@ -38,15 +37,20 @@ namespace DXGrid_CreateCellContextMenu {
         }
         private List<Account> CreateAccounts() {
             List<Account> list = new List<Account>();
-            list.Add(new Account() { UserName = "Nick White", 
+            list.Add(new Account() { UserName = "Nick White",
+                CanBeDeleted = false,
                 RegistrationDate = DateTime.Today });
-            list.Add(new Account() { UserName = "Jack Rodman", 
+            list.Add(new Account() { UserName = "Jack Rodman",
+                CanBeDeleted = true,
                 RegistrationDate = new DateTime(2009, 5, 10) });
-            list.Add(new Account() { UserName = "Sandra Sherry", 
+            list.Add(new Account() { UserName = "Sandra Sherry",
+                CanBeDeleted = false,
                 RegistrationDate = new DateTime(2008, 12, 22) });
             list.Add(new Account() { UserName = "Sabrina Vilk", 
+                CanBeDeleted = true,
                 RegistrationDate = DateTime.Today });
-            list.Add(new Account() { UserName = "Mike Pearson", 
+            list.Add(new Account() { UserName = "Mike Pearson",
+                CanBeDeleted = true,
                 RegistrationDate = new DateTime(2008, 10, 18) });
             return list;
         }
@@ -55,6 +59,7 @@ namespace DXGrid_CreateCellContextMenu {
     public class Account {
         public string UserName { get; set; }
         public DateTime RegistrationDate { get; set; }
+        public bool CanBeDeleted { get; set; }
     }
     #endregion
 }
