@@ -1,0 +1,29 @@
+<Window x:Class="DXGrid_CreateCellContextMenu.Window1"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:dxb="http://schemas.devexpress.com/winfx/2008/xaml/bars"
+        xmlns:dxg="http://schemas.devexpress.com/winfx/2008/xaml/grid"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Window1" Height="300" Width="563" >
+    <Grid>
+        <dxg:GridControl x:Name="grid">
+            <dxg:GridControl.Columns>
+                <dxg:GridColumn FieldName="UserName"/>
+                <dxg:GridColumn FieldName="RegistrationDate"/>
+                <dxg:GridColumn FieldName="CanBeDeleted" AllowEditing="False"/>
+            </dxg:GridControl.Columns>
+            <dxg:GridControl.View>
+                <!--region #RowCellMenuCustomization-->
+                <dxg:TableView x:Name="view" AutoWidth="True">
+                    <dxg:TableView.RowCellMenuCustomizations>
+                        <dxb:BarButtonItem Name="deleteRowItem" Content="Delete"
+                                           IsEnabled="{Binding Row.Row.CanBeDeleted}"
+                                           ItemClick="deleteRowItem_ItemClick"/>
+                        <dxb:BarButtonItem Name="copyCellDataItem" Content="Copy Cell Data" 
+                                           ItemClick="copyCellDataItem_ItemClick" />
+                    </dxg:TableView.RowCellMenuCustomizations>
+                </dxg:TableView>
+                <!--endregion #RowCellMenuCustomization-->
+            </dxg:GridControl.View>
+        </dxg:GridControl>
+    </Grid>
+</Window>
