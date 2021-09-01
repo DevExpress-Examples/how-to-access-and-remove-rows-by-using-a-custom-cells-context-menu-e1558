@@ -1,4 +1,4 @@
-Microsoft Visual Studio Solution File, Format Version 11.00
+﻿Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 16
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "DXGrid_CreateCellContextMenu", "DXGrid_CreateCellContextMenu.Net5.vbproj", "{294F71F5-3E30-4167-8F16-C8C1022C1457}"
 EndProject
