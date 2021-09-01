@@ -1,5 +1,5 @@
 Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2010
+# Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DXGrid_CreateCellContextMenu", "DXGrid_CreateCellContextMenu.csproj", "{294F71F5-3E30-4167-8F16-C8C1022C1457}"
 EndProject
 Global
