@@ -16,9 +16,7 @@ Namespace DXGrid_CreateCellContextMenu
 
         Private Sub OnCopyRow(ByVal sender As Object, ByVal e As ItemClickEventArgs)
             Dim menuInfo As GridCellMenuInfo = Nothing
-            If CSharpImpl.__Assign(menuInfo, TryCast(Me.view.GridMenu.MenuInfo, GridCellMenuInfo)) IsNot Nothing AndAlso menuInfo.Row IsNot Nothing Then
-                Me.grid.CopyCurrentItemToClipboard()
-            End If
+            If CSharpImpl.__Assign(menuInfo, TryCast(Me.view.GridMenu.MenuInfo, GridCellMenuInfo)) IsNot Nothing AndAlso menuInfo.Row IsNot Nothing Then Me.grid.CopyCurrentItemToClipboard()
         End Sub
 
         Private Sub OnDeleteRow(ByVal sender As Object, ByVal e As ItemClickEventArgs)
