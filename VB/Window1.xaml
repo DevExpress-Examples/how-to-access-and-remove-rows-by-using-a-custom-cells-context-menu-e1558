@@ -12,17 +12,15 @@
                 <dxg:GridColumn FieldName="CanBeDeleted" AllowEditing="False"/>
             </dxg:GridControl.Columns>
             <dxg:GridControl.View>
-                <!--region #RowCellMenuCustomization-->
                 <dxg:TableView x:Name="view" AutoWidth="True">
                     <dxg:TableView.RowCellMenuCustomizations>
                         <dxb:BarButtonItem Name="deleteRowItem" Content="Delete"
                                            IsEnabled="{Binding Row.Row.CanBeDeleted}"
-                                           ItemClick="deleteRowItem_ItemClick"/>
-                        <dxb:BarButtonItem Name="copyCellDataItem" Content="Copy Cell Data" 
-                                           ItemClick="copyCellDataItem_ItemClick" />
+                                           ItemClick="OnDeleteRow"/>
+                        <dxb:BarButtonItem Name="copyCellDataItem" Content="Copy" 
+                                           ItemClick="OnCopyRow" />
                     </dxg:TableView.RowCellMenuCustomizations>
                 </dxg:TableView>
-                <!--endregion #RowCellMenuCustomization-->
             </dxg:GridControl.View>
         </dxg:GridControl>
     </Grid>
