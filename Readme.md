@@ -19,3 +19,13 @@ In this example, the **Delete** button is enabled only for rows whose **CanBeDel
                    IsEnabled="{Binding Row.Row.CanBeDeleted}"
                    ItemClick="OnDeleteRow"/>
 ```
+
+## Documentation
+
+* [Context Menus](https://docs.devexpress.com/WPF/6587/controls-and-libraries/data-grid/miscellaneous/context-menus)
+* [The List of Bar Items and Links](https://docs.devexpress.com/WPF/6646/controls-and-libraries/ribbon-bars-and-menu/common-concepts/the-list-of-bar-items-and-links)
+* [RowCellMenuCustomizations](https://docs.devexpress.com/WPF/DevExpress.Xpf.Grid.DataViewBase.RowCellMenuCustomizations)
+
+## More Examples
+
+* [WPF Data Grid - Customize the Context Menu](https://github.com/DevExpress-Examples/how-to-customize-a-grids-context-menu-e1925)
