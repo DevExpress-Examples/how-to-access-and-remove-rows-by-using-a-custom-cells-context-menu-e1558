@@ -4,26 +4,18 @@
 [![](https://img.shields.io/badge/📖_How_to_use_DevExpress_Examples-e9f6fc?style=flat-square)](https://docs.devexpress.com/GeneralInformation/403183)
 <!-- default badges end -->
 
-# How to access and remove rows by using a custom cell's context menu.
+# WPF Data Grid - Display a Context Menu for Data Cells
 
+This example shows how to define a cell's context menu. The context menu allows users to delete a row or copy its data to the clipboard.
 
-This example shows how to access and remove rows by using a custom context menu for cells. 
+![image](https://user-images.githubusercontent.com/65009440/173060803-2d949b04-11fb-455c-a5ad-41a17b3d3657.png)
 
-To implement such a context menu, add corresponding [BarItems](https://documentation.devexpress.com/WPF/6646/Controls-and-Libraries/Ribbon-Bars-and-Menu/Common-Features/The-List-of-Bar-Items-and-Links) to TableView's [RowCellMenuCustomizations](https://documentation.devexpress.com/WPF/DevExpress.Xpf.Grid.DataViewBase.RowCellMenuCustomizations.property) collection: 
+To specify a context menu, add [BarItems](https://docs.devexpress.com/WPF/6646/controls-and-libraries/ribbon-bars-and-menu/common-concepts/the-list-of-bar-items-and-links) to the TableView's [RowCellMenuCustomizations](https://docs.devexpress.com/WPF/DevExpress.Xpf.Grid.DataViewBase.RowCellMenuCustomizations) collection. The menu item's **DataContext** property is set to an object of the **GridCellMenuInfo** type. That allows you to use the `Row.Row.[Property_Name]` path to access data source properties.  
 
-````xaml
-<dxg:TableView.RowCellMenuCustomizations>
-    <dxb:BarButtonItem Content="Delete" ... />
-    <dxb:BarButtonItem Content="Copy Cell Data" .../>
-</dxg:TableView.RowCellMenuCustomizations>
-````
+In this example, the **Delete** button is enabled only for rows whose **CanBeDeleted** property is `true`: 
 
-You can enable and disable such items based on property values in underlying data items. DataContexts in these items contain an object of the **GridCellMenuInfo** data type. This object's **Row.Row** property contains your data item instance. Therefore, you can bind to this data item's properties using the ***Row.Row.[Property_Name]*** path.  
-
-In this example, the *Delete* item is enabled only for rows whose *CanBeDeleted* property is True: 
-
-````xaml
+```xaml
 <dxb:BarButtonItem Name="deleteRowItem" Content="Delete"
-                    IsEnabled="{Binding Row.Row.CanBeDeleted}"
-                    ItemClick="deleteRowItem_ItemClick"/>
-````
+                   IsEnabled="{Binding Row.Row.CanBeDeleted}"
+                   ItemClick="OnDeleteRow"/>
+```
