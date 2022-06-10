@@ -11,9 +11,8 @@ namespace DXGrid_CreateCellContextMenu {
             grid.ItemsSource = AccountList.GetData();
         }
         void OnCopyRow(object sender, ItemClickEventArgs e) {
-            if (view.GridMenu.MenuInfo is GridCellMenuInfo menuInfo && menuInfo.Row != null) {
+            if (view.GridMenu.MenuInfo is GridCellMenuInfo menuInfo && menuInfo.Row != null)
                 grid.CopyCurrentItemToClipboard();
-            }
         }
         void OnDeleteRow(object sender, ItemClickEventArgs e) {
             if (view.GridMenu.MenuInfo is GridCellMenuInfo menuInfo && menuInfo.Row != null)
