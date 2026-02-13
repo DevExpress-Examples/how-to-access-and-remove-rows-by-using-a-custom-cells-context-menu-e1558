@@ -40,7 +40,7 @@ In this example, the **Delete** button is enabled only for rows whose **CanBeDel
 
 * [WPF Data Grid - Customize the Context Menu](https://github.com/DevExpress-Examples/how-to-customize-a-grids-context-menu-e1925)
 <!-- feedback -->
-## Does this example address your development requirements/objectives?
+## Does This Example Address Your Development Requirements/Objectives?
 
 [<img src="https://www.devexpress.com/support/examples/i/yes-button.svg"/>](https://www.devexpress.com/support/examples/survey.xml?utm_source=github&utm_campaign=how-to-access-and-remove-rows-by-using-a-custom-cells-context-menu-e1558&~~~was_helpful=yes) [<img src="https://www.devexpress.com/support/examples/i/no-button.svg"/>](https://www.devexpress.com/support/examples/survey.xml?utm_source=github&utm_campaign=how-to-access-and-remove-rows-by-using-a-custom-cells-context-menu-e1558&~~~was_helpful=no)
 
